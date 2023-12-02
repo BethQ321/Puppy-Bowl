@@ -18,19 +18,43 @@ async function render() {
         return `<a href=#${puppy.name} class="indPuppy"> ${puppy.name} </a>`
     })
 
-    allPuppiesDiv.innerHTML = `<div class="puppyContainer"> ${puppyList.join("")}</div>`
-
     const name = window.location.hash.slice(1)
+    //console.log(name)
     
     const currentPuppy = puppyPlayers.find((puppy) => {
         return puppy.name === name
     })
-    console.log(currentPuppy)
+    //console.log(currentPuppy)
 
-    singlePuppyDiv.innerHTML = `
-        <h3> Say hello to ${currentPuppy.name}</h3>
-        <img src=${currentPuppy.imageUrl}>
-    `
+    let currentTeam = "";
+    if(Math.round(Math.random()) === 1) {
+        currentTeam = "Ruff & Tumble"
+    } else {
+        currentTeam = "The Fast & the Furriest"
+    }
+        
+    if(currentPuppy) {
+        allPuppiesDiv.innerHTML = ""
+        singlePuppyDiv.innerHTML = `
+            <div id="puppyImageDiv">
+                <img src=${currentPuppy.imageUrl}>
+            </div>
+            <div id="puppyInfoDiv">
+                <h3> Cheer on ${currentPuppy.name}</h3>
+                <div>
+                    <p> Breed: ${currentPuppy.breed}</p>
+                    <p> Status: ${currentPuppy.status}</p>
+                    <p> Team: ${currentTeam}</p>
+                </div>
+                <a href=# id="backButtonLink"><button id="backButton">Back to puppies</button></a>
+            </div>
+        `
+        //console.log(currentPuppy)
+    } else {
+        allPuppiesDiv.innerHTML = `<div class="puppyContainer"> ${puppyList.join("")}</div>`
+        singlePuppyDiv.innerHTML = ""
+        //console.log(currentPuppy)
+    }
 
 }
 
