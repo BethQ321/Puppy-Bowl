@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url("/images/football field.jpg");
+    background-image: url("/images/football-field.jpg");
     background-size: cover;
     background-color: white;
     min-height: 100%;
@@ -37,30 +37,69 @@ h1 {
     height: 100px;
 }
 
-.puppyContainer {
+#allPuppiesDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#fieldDiv, #benchDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.spaceBetween {
+    width: 10rem;
+}
+
+.groupDiv {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: flex-end;
+}
+
+.puppyContainerField, .puppyContainerBench {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
 }
 
-.indPuppy {
-    border: 3px solid black;
+.indPuppyRed, .indPuppyBlue {
+    //border: 3px solid black;
     padding: 35px 5px 30px 5px;
     margin: 10px;
-    height: 120px;
-    width: 180px;
-    flex-grow: 1;
+    height: 125px;
+    width: 160px;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     text-decoration: none;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-    background-color: rgba(232, 242, 232, .9);    
+    font-weight: 900;
+    //background-color: rgba(232, 242, 232, .9);    
 }
 
-.indPuppy:link {color: black}
-.indPuppy:visited {color: black}
-.indPuppy:hover {
-    background-color: rgba(109, 112, 109, .9);
+.indPuppyRed {
+    background-image: url("/images/red-football-helmet-sm.png");
+}
+
+.indPuppyBlue {
+    background-image: url("images/blue-football-helmet-sm.png");
+}
+
+.indPuppyRed:link {color: black}
+.indPuppyRed:visited {color: black}
+.indPuppyRed:hover {
+    color: white;
+    background-image: url("/images/black-football-helmet-sm.png");
+}
+
+.indPuppyBlue:link {color: black}
+.indPuppyBlue:visited {color: black}
+.indPuppyBlue:hover {
+    color: white;
+    background-image: url("/images/black-football-helmet-flipped-sm.png");
 }
 
 #singlePuppyDiv {
@@ -74,13 +113,20 @@ h3 {
     text-align: center;
     color: black;
     text-shadow: 4px 4px 7px lightslategray;
-    padding: 15px;
+    padding: 0 15px 15px 15px;
     height: auto;
     width: auto;
     text-align: center;
     font-size: 45px;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     margin: 0px;
+}
+
+p {
+    text-align: center;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-size: 30px;
+    margin-bottom: -20px;
 }
 
 #puppyImageDiv {
