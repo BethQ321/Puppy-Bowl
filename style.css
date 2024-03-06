@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url("/images/football-field.jpg");
+    background-image: url("/public/assets/football-field.jpg");
     background-size: cover;
     background-color: white;
     min-height: 100%;
@@ -67,7 +67,7 @@ h1 {
 }
 
 .indPuppyRed, .indPuppyBlue {
-    //border: 3px solid black;
+    /* border: 3px solid black; */
     padding: 35px 5px 30px 5px;
     margin: 10px;
     height: 125px;
@@ -77,29 +77,29 @@ h1 {
     text-decoration: none;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     font-weight: 900;
-    //background-color: rgba(232, 242, 232, .9);    
+    /* background-color: rgba(232, 242, 232, .9);     */
 }
 
 .indPuppyRed {
-    background-image: url("/images/red-football-helmet-sm.png");
+    background-image: url("/public/assets/red-football-helmet-sm.png");
 }
 
 .indPuppyBlue {
-    background-image: url("images/blue-football-helmet-sm.png");
+    background-image: url("/public/assets/blue-football-helmet-sm.png");
 }
 
 .indPuppyRed:link {color: black}
 .indPuppyRed:visited {color: black}
 .indPuppyRed:hover {
     color: white;
-    background-image: url("/images/black-football-helmet-sm.png");
+    background-image: url("/public/assets/black-football-helmet-sm.png");
 }
 
 .indPuppyBlue:link {color: black}
 .indPuppyBlue:visited {color: black}
 .indPuppyBlue:hover {
     color: white;
-    background-image: url("/images/black-football-helmet-flipped-sm.png");
+    background-image: url("/public/assets/black-football-helmet-flipped-sm.png");
 }
 
 #singlePuppyDiv {
@@ -132,7 +132,7 @@ p {
 #puppyImageDiv {
     margin: 0px;
     padding: 0px;
-    //border: 2px black solid;
+    /* border: 2px black solid; */
     width: 50%;
     display: flex;
     justify-content: center;
